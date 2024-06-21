@@ -1,10 +1,12 @@
+@import "../../styles/variables";
+
 .card-roxo-button {
   font-size: 16px;
   text-align: center;
   margin-top: 10px;
   border-radius: 25px;
   padding: 10px;
-  background-color: #a056d9;
+  background-color: $bgColor;
   cursor: pointer;
   font-weight: bold;
 }

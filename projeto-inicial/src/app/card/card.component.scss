@@ -20,3 +20,11 @@
     font-size: 40px;
   }
 }
+// atualizacao que afeta o slider vindo do angular material no card-component
+// :host ::ng-deep mat-slider .mdc-slider__track--active_fill {
+//   border-color: red !important;
+// }
+
+.global {
+  background-color: yellowgreen;
+}
