@@ -1,0 +1,10 @@
+<input
+  id="meu-input"
+  (keyup)="handleInputKeyup($event)"
+  (input)="handleInputEvent($event)"
+  [attr.disabled]="inputDisabled ? true : null"
+/>
+
+<button [style.width.px]="widthButton" [style.backgroundColor]="'purple'">
+  Botao 0
+</button>
