@@ -1,0 +1,32 @@
+<div class="list">
+  <app-person
+    *ngFor="
+      let person of listPeople;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isOdd = odd
+    "
+    [personName]="person.name"
+    [personAge]="person.age"
+    [personIndex]="i"
+    [isFirst]="isFirst"
+    [isLast]="isLast"
+    [isOdd]="isOdd"
+    [isSelected]="personSelectedIndex === i"
+    (onPersonSelectEmitt)="selectPerson($event)"
+  ></app-person>
+</div>
+
+<!-- <div class="item item--highlighted">
+  <p class="item__name">Fulano da Silva</p>
+  <p class="item__age">34 anos</p>
+</div>
+<div class="item item--odd">
+  <p class="item__name">Jorginho Carvalho</p>
+  <p class="item__age">55 anos</p>
+</div>
+<div class="item">
+  <p class="item__name">Joãozinho da Silva</p>
+  <p class="item__age">18 anos</p>
+</div> -->
