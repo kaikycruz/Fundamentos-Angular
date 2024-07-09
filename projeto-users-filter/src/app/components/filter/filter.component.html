@@ -18,7 +18,6 @@
             matStartDate
             placeholder="Start date"
             [(ngModel)]="filterOptions.startDate"
-            (ngModelChange)="dateSelected($event)"
           />
           <input
             matEndDate
@@ -37,15 +36,17 @@
     <div class="form__status">
       <mat-form-field>
         <mat-label>Status</mat-label>
-        <mat-select>
-          <!-- @for (food of foods; track food) {
-          <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
-          } -->
+        <mat-select [(ngModel)]="filterOptions.status">
+          @for (status of statusList; track status) {
+          <mat-option [value]="status.value">{{
+            status.description
+          }}</mat-option>
+          }
         </mat-select>
       </mat-form-field>
     </div>
     <div class="form__button">
-      <button mat-raised-button color="primary">Filtar</button>
+      <button mat-raised-button color="primary" (click)="onFilter()">Filtar</button>
     </div>
   </div>
 </div>
