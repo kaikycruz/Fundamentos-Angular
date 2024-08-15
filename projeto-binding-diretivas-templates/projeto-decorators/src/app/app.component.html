@@ -1,4 +1,4 @@
-<button
+<!-- <button
   class="btn-{{ i }}"
   #meuButton
   *ngFor="let btn of buttonList; let i = index"
@@ -9,4 +9,32 @@
 
 <button (click)="resetButtons()">Resetar</button>
 <button (click)="first()">pegar Primeiro</button>
-<button (click)="remove()">Remover item</button>
+<button (click)="remove()">Remover item</button> -->
+
+<p
+  [ngStyle]="{
+    'background-color': addBgColor ? 'orange' : 'transparent'
+  }"
+  (mouseover)="onMouseOver()"
+  (mouseout)="onMouseOut()"
+>
+  Paragrafo sem diretiva
+</p>
+=================================================================
+<app-com-diretiva></app-com-diretiva>
+
+<button [disabled]="false">Diretiva disabled</button>
+<br />
+<button appDisabled>HostBinding att disabled</button>
+<br />
+<input appListener />
+
+<div #minhaDiv></div>
+<div id="minha-outra-div"></div>
+<button (click)="createNewElement()">Criar elemento</button>
+
+<div appFocusSecondInput>
+  <input placeholder="input 1" />
+  <input placeholder="input 2" />
+  <input placeholder="input 3" />
+</div>
